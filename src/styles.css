@@ -1,0 +1,161 @@
+/* Importar a fonte Libre Franklin do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
+
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Libre Franklin', Arial, sans-serif; /* Define a fonte padrão da página */
+  background-color: #8B0000; /* Define o fundo da página */
+  color: #fff; /* Define a cor do texto padrão */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+}
+
+label + select {
+  padding-top: 10px; /* Adiciona espaçamento acima dos campos select */
+  margin-top: 10px; /* Espaçamento entre o label e o select */
+  margin-bottom: 15px; /* Espaçamento abaixo do select */
+  display: block;    /* Garante que o select fique em uma nova linha */
+}
+
+label + select + span {
+  margin-top: 5px; /* Espaçamento entre o select e a mensagem de erro */
+}
+
+label {
+  display: block; /* Garante que o label fique em uma linha separada */
+  margin-bottom: 2px; /* Espaçamento entre o label e o campo */
+}
+
+form {
+  max-width: 600px; /* Limita a largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário na página */
+  padding: 20px; /* Adiciona espaçamento interno */
+  border: 1px solid #ccc; /* Adiciona uma borda ao formulário */
+  border-radius: 8px; /* Arredonda os cantos do formulário */
+  background-color: #f9f9f9; /* Define uma cor de fundo suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+  font-family: 'Libre Franklin', Arial, sans-serif; /* Aplica a fonte ao formulário */
+}
+
+form h2 {
+  text-align: center; /* Centraliza o título do formulário */
+  color: #333; /* Define uma cor para o título */
+  margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+}
+
+form label {
+  display: block; /* Garante que o label fique em uma linha separada */
+  margin-bottom: 5px; /* Espaçamento entre o label e o campo */
+  font-weight: bold; /* Destaca os rótulos */
+  color: #555; /* Define uma cor para os rótulos */
+}
+
+form input {
+  display: block; /* Garante que os campos fiquem em uma nova linha */
+  margin-bottom: 5px; /* Espaçamento uniforme abaixo de cada campo */
+  width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+  max-width: 100%; /* Limita a largura máxima dos campos */
+  padding: 10px; /* Adiciona espaçamento interno */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  border: 1px solid #ccc; /* Adiciona uma borda aos campos */
+  border-radius: 4px; /* Arredonda os cantos dos campos */
+  font-size: 14px; /* Define o tamanho da fonte */
+  background-color: #fff; /* Define uma cor de fundo para os campos */
+  transition: border-color 0.3s; /* Adiciona uma transição suave para a borda */
+}
+
+form input:focus {
+  border-color: #007bff; /* Altera a cor da borda ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+form select {
+  display: block; /* Garante que os campos fiquem em uma nova linha */
+  margin-bottom: 5px; /* Espaçamento uniforme abaixo de cada campo */
+  width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+  max-width: 40%; /* Limita a largura máxima dos campos de lista */
+  padding: 10px; /* Adiciona espaçamento interno */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  text-align: left; /* Centraliza o texto dentro do campo select */
+  text-align-last: left; /* Centraliza o texto da opção selecionada */
+  border: 1px solid #ccc; /* Adiciona uma borda aos campos */
+  border-radius: 4px; /* Arredonda os cantos dos campos */
+  font-size: 14px; /* Define o tamanho da fonte */
+  background-color: #fff; /* Define uma cor de fundo para os campos */
+  transition: border-color 0.3s; /* Adiciona uma transição suave para a borda */
+}
+
+form select:focus {
+  border-color: #007bff; /* Altera a cor da borda ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+form button {
+  display: inline-block; /* Garante que os botões fiquem alinhados */
+  padding: 10px 20px; /* Adiciona espaçamento interno */
+  font-size: 14px; /* Define o tamanho da fonte */
+  color: #fff; /* Define a cor do texto */
+  background-color: #007bff; /* Define a cor de fundo */
+  border: none; /* Remove a borda padrão */
+  border-radius: 4px; /* Arredonda os cantos do botão */
+  cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+  transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse */
+}
+
+form button[type="button"] {
+  background-color: #6c757d; /* Define uma cor diferente para o botão de excluir */
+}
+
+form button[type="button"]:hover {
+  background-color: #5a6268; /* Altera a cor de fundo ao passar o mouse */
+}
+
+form span.error-message {
+  color: red; /* Cor para mensagens de erro */
+  font-size: 12px; /* Tamanho menor para mensagens de erro */
+  margin-top: -5px; /* Ajusta o espaçamento entre o campo e a mensagem */
+  display: block; /* Garante que a mensagem fique em uma nova linha */
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Estilo para o cabeçalho */
+.header {
+  background-color: #fff; /* Fundo branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  display: flex; /* Layout flexível */
+  align-items: center; /* Alinha verticalmente os itens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.header .logo {
+  height: 40px; /* Altura da logo */
+}
+
+/* Estilo para o container do formulário */
+.form-container {
+  max-width: 600px; /* Limita a largura máxima */
+  margin: 20px auto; /* Centraliza o container */
+  padding: 20px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda ao redor do formulário */
+  border-radius: 8px; /* Cantos arredondados */
+  background-color: #f9f9f9; /* Fundo claro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Ajuste do título do formulário */
+.form-container h2 {
+  text-align: center; /* Centraliza o título */
+  color: #555; /* Mesma cor dos rótulos */
+  font-size: 24px; /* Tamanho maior */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
