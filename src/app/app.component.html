@@ -19,7 +19,7 @@
            (keypress)="permitirSomenteNumeros($event)"
            (input)="aplicarMascaraCNPJ($event)"
            maxlength="18"
-           placeholder="Vai cagar"
+           placeholder="00.000.000/0000-00"
            [ngClass]="{'ng-invalid': erros.cnpj}">
     <span *ngIf="erros.cnpj" class="error-message">{{ erros.cnpj }}</span><br>
 
