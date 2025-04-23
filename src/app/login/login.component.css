@@ -1,0 +1,109 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8B0000; /* Vermelho já utilizado */
+}
+
+.login-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-image {
+  flex: 2; /* Aumenta o tamanho da área da imagem */
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form {
+  flex: 1; /* Diminui o tamanho da área do formulário */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8B0000; /* Vermelho já utilizado */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a30000;
+}
+
+.login-options {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-button {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: #ddd;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
