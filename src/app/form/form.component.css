@@ -6,11 +6,13 @@ form {
     border-radius: 5px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
 
 label {
     display: block;
     margin-top: 10px;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
 
 input, select {
@@ -21,11 +23,13 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
 
 button {
     margin-top: 15px;
     padding: 10px 15px;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
 
 button + button {
@@ -37,6 +41,7 @@ h2 {
     margin-top: 15px;
     padding: 10px 15px;
     text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
 
 /* Estilo para campos com erro */
