@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #8B0000; /* Vermelho anterior */
+  background: linear-gradient(135deg, #c9e265 0%, #09205f 100%); /* Gradiente de fundo com ângulo de 43° */
   color: #fff; /* Define a cor do texto padrão */
 }
 
