@@ -89,6 +89,8 @@ span.error-message {
 }
 
 .import-button {
+    display: block;
+    margin: 10px 0 20px; /* Espaçamento acima e abaixo */
     padding: 10px 20px; /* Espaçamento interno */
     font-size: 14px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
@@ -97,8 +99,10 @@ span.error-message {
     border-radius: 4px; /* Cantos arredondados */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
     transition: background-color 0.3s; /* Transição suave para hover */
-    margin-top: -5px; /* Move o botão 5px para cima */
-}
+    text-align: left; /* Alinha o texto à esquerda */
+    width: 30%; /* Faz o botão ocupar a mesma largura do card */
+    max-width: 600px; /* Limita a largura máxima para alinhar com o card */
+margin-left: 5%;}
 
 .import-button:hover {
     background-color: #0056b3; /* Cor ao passar o mouse */

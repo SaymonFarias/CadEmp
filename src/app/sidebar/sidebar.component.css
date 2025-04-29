@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-  width: 60px;
+  width: 50px;
   background-color: #333;
   color: #fff;
   transition: width 0.3s;
@@ -53,4 +53,48 @@
 
 .sidebar.expanded + .content {
   margin-left: 200px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px ;
+  background-color: #444; /* Fundo para destacar a logo */
+}
+
+.logo {
+  width: 60px; /* Tamanho da logo */
+  height: auto;
+  transition: width 0.3s;
+}
+
+.sidebar.expanded .logo {
+  width: 120px; /* Tamanho maior da logo quando expandida */
+}
+
+.logout-container {
+  position: absolute;
+  bottom: 20px; /* Posiciona o botão 20px acima do final da barra */
+  width: 100%; /* Garante que ocupe toda a largura */
+  text-align: center; /* Centraliza o conteúdo */
+  padding-left: 15px; /* Espaçamento alinhado com o botão Formulário */
+}
+
+.logout-container a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Alinha verticalmente com o botão Formulário */
+  justify-content: flex-start; /* Alinha à esquerda */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+  padding: 10px 0;
+}
+
+.logout-container a i {
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.sidebar.expanded .logout-container a {
+  padding-left: 0px; /* Mantém o alinhamento no estado expandido */
 }
