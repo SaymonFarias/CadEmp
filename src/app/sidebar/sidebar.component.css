@@ -1,0 +1,56 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 60px;
+  background-color: #333;
+  color: #fff;
+  transition: width 0.3s;
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  z-index: 1000; /* Garante que a barra lateral fique acima do conteúdo */
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.sidebar ul li a i {
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.content {
+  margin-left: 60px;
+  padding: 20px;
+  flex: 1;
+  background: linear-gradient(135deg, #c9e265 0%, #09205f 100%); /* Gradiente de fundo */
+  overflow-y: auto;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.expanded + .content {
+  margin-left: 200px;
+}

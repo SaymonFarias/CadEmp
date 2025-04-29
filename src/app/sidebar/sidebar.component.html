@@ -1,0 +1,21 @@
+<div class="layout">
+  <div class="sidebar" (mouseenter)="expanded = true" (mouseleave)="expanded = false" [class.expanded]="expanded">
+    <ul>
+      <li>
+        <a routerLink="/form">
+          <i class="fi fi-rr-edit"></i> <!-- Ícone para o formulário -->
+          <span *ngIf="expanded">Formulário</span> <!-- Nome da página exibido apenas quando expandido -->
+        </a>
+      </li>
+      <li>
+        <a routerLink="/login">
+          <i class="fi fi-rr-exit"></i> <!-- Ícone para logout -->
+          <span *ngIf="expanded">Sair</span> <!-- Nome da página exibido apenas quando expandido -->
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
