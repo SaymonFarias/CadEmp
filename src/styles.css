@@ -161,3 +161,21 @@ form span.error-message {
   font-size: 24px; /* Tamanho maior */
   margin-bottom: 20px; /* Espaçamento abaixo do título */
 }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  h1, h2, h3 {
+    font-size: 90%; /* Reduz o tamanho dos títulos */
+  }
+
+  button {
+    padding: 8px 12px; /* Reduz o espaçamento interno dos botões */
+  }
+
+  input, select {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos campos */
+  }
+}

@@ -17,23 +17,23 @@
 }
 
 .login-image {
-  flex: 2; /* Mantém o tamanho maior para o espaço reservado */
-  background-color: #f4f4f4; /* Restaura a cor cinza */
+  flex: 3; /* Aumenta a área disponível para a imagem */
+  background-color: #fff; /* Fundo branco */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0; /* Remove o espaçamento interno */
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  width: 120%;
+  height: 120%;
   object-fit: cover; /* Faz a imagem preencher o espaço sem distorção */
 }
 
 .login-form {
-  flex: 1; /* Diminui o tamanho da área do formulário */
-  padding: 40px;
+  flex: 1; /* Define a área do formulário */
+  padding: 30px; /* Espaçamento interno */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -197,5 +197,123 @@ button:hover {
   to {
     transform: scale(1.5);
     opacity: 0;
+  }
+}
+
+@keyframes expandIn {
+  from {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.page-transition-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2000;
+  animation: expandIn 0.5s forwards;
+}
+
+.login-img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: 100%; /* Faz a imagem ocupar toda a altura do card */
+  object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorção */
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Empilha a imagem e o formulário */
+    max-width: 100%; /* Remove a largura máxima fixa */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .login-image {
+    flex: none; /* Remove o tamanho fixo */
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .login-form {
+    padding: 20px; /* Reduz o espaçamento interno */
+    text-align: center; /* Centraliza o texto do formulário */
+  }
+
+  .social-buttons {
+    flex-wrap: wrap; /* Permite que os botões quebrem linha */
+    gap: 10px; /* Reduz o espaçamento entre os botões */
+  }
+
+  h2, p {
+    text-align: center; /* Centraliza os títulos e parágrafos */
+  }
+}
+
+@media (max-width: 768px) {
+  .login-image {
+    display: none; /* Remove o GIF no mobile */
+  }
+
+  .login-container {
+    flex-direction: column; /* Ajusta o layout para empilhar os elementos */
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%; /* Reduz a largura máxima do card */
+    padding: 20px; /* Reduz o espaçamento interno */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .login-form {
+    padding: 15px; /* Reduz o espaçamento interno do formulário */
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 80%; /* Reduz ainda mais a largura máxima do card */
+    padding: 20px 0px 50px; /* Reduz o espaçamento interno */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .login-form {
+    padding: 10px; /* Reduz ainda mais o espaçamento interno do formulário */
+  }
+
+  .social-buttons {
+    gap: 5px; /* Reduz o espaçamento entre os botões */
+  }
+
+  button {
+    padding: 8px 10px; /* Reduz o espaçamento interno dos botões */
+    font-size: 14px; /* Reduz o tamanho da fonte dos botões */
+  }
+
+  input {
+    padding: 8px; /* Reduz o espaçamento interno dos campos de entrada */
+    font-size: 14px; /* Reduz o tamanho da fonte dos campos */
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    text-align: left; /* Restaura o alinhamento à esquerda para o formulário */
+  }
+
+  label, input {
+    text-align: left; /* Garante que os campos de usuário e senha permaneçam alinhados à esquerda */
+  }
+
+  h2, p {
+    text-align: center; /* Mantém os títulos e parágrafos centralizados */
   }
 }

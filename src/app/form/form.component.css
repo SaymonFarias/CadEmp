@@ -7,6 +7,7 @@ form {
     background-color: #f9f9f9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+    margin-top: 15px; /* Reduz o espaçamento entre o botão e o início do formulário */
 }
 
 label {
@@ -27,7 +28,7 @@ input, select {
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 20px; /* Aumenta o espaçamento acima do botão */
     padding: 10px 15px;
     font-family: Arial, sans-serif; /* Define a mesma fonte do login */
 }
@@ -89,8 +90,9 @@ span.error-message {
 }
 
 .import-button {
-    display: block;
-    margin: 10px 0 20px; /* Espaçamento acima e abaixo */
+    display: inline-block; /* Garante que o botão se ajuste ao conteúdo */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-align: center; /* Centraliza o texto no botão */
     padding: 10px 20px; /* Espaçamento interno */
     font-size: 14px; /* Tamanho da fonte */
     color: #fff; /* Cor do texto */
@@ -99,11 +101,20 @@ span.error-message {
     border-radius: 4px; /* Cantos arredondados */
     cursor: pointer; /* Altera o cursor ao passar sobre o botão */
     transition: background-color 0.3s; /* Transição suave para hover */
-    text-align: left; /* Alinha o texto à esquerda */
-    width: 30%; /* Faz o botão ocupar a mesma largura do card */
-    max-width: 600px; /* Limita a largura máxima para alinhar com o card */
-margin-left: 5%;}
+    margin-bottom: 2px; /* Reduz o espaçamento abaixo do botão */
+    margin-left: 30px; /* Alinha o botão à direita */
+}
 
 .import-button:hover {
     background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .import-cnpj-button {
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    padding: 8px 10px; /* Reduz o espaçamento interno */
+    white-space: nowrap; /* Garante que o texto fique em uma única linha */
+    width: auto; /* Ajusta a largura automaticamente */
+    
+  }
 }

@@ -26,8 +26,9 @@ export class LoginComponent {
       this.isTransitioning = true;
 
       setTimeout(() => {
+        document.body.classList.add('page-transition-in'); // Adiciona a classe para expandIn
         this.router.navigate(['/inicio']); // Redireciona para a página de boas-vindas
-      }, 500);
-    }, 3000);
+      }, 500); // Tempo para expandOut
+    }, 3000); // Tempo de carregamento simulado
   }
 }
