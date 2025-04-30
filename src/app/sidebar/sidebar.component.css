@@ -50,10 +50,14 @@
   background-color: #333; /* Fundo padrão dos botões */
   transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
   border-radius: 0; /* Remove os cantos arredondados */
+  white-space: nowrap; /* Impede que o texto seja cortado */
+  overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+  text-overflow: ellipsis; /* Adiciona reticências ao texto cortado */
 }
 
 .sidebar.expanded ul li a {
   justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+  white-space: normal; /* Permite que o texto quebre em várias linhas no estado expandido */
 }
 
 .sidebar ul li a:hover {
@@ -252,10 +256,14 @@
     background-color: #333; /* Fundo padrão */
     transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
     border-radius: 0; /* Remove os cantos arredondados */
+    white-space: nowrap; /* Impede que o texto seja cortado */
+    overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+    text-overflow: ellipsis; /* Adiciona reticências ao texto cortado */
   }
 
   .sidebar.expanded ul li a {
     justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+    white-space: normal; /* Permite que o texto quebre em várias linhas no estado expandido */
   }
 
   .sidebar ul li a:hover {

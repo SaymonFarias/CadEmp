@@ -55,7 +55,7 @@
 }
 
 .animation-gif {
-  width: 115%; /* Aumenta o tamanho do GIF em 200% */
+  width: 100%; /* Aumenta o tamanho do GIF em 200% */
   height: auto; /* Mantém a proporção */
 }
 
