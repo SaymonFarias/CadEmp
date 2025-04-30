@@ -58,6 +58,12 @@ span.error-message {
     border-bottom: 1px solid #ccc;
 }
 
+.header .logo {
+    height: 50px; /* Define a altura da logo */
+    width: auto; /* Mantém a proporção da largura */
+    margin-right: 20px; /* Espaçamento entre a logo e os outros itens */
+}
+
 .nav-links {
     display: flex;
     gap: 30px; /* Aumenta o espaçamento entre os links de 20px para 30px */

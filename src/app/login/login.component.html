@@ -1,0 +1,53 @@
+<div class="login-page" [ngClass]="{ 'page-transition': isTransitioning }">
+  <div class="login-container" *ngIf="!isLoading">
+    <div class="login-image">
+      <img src="assets/images/login3.png" alt="Login Animation" class="login-img">
+    </div>
+    <div class="login-form">
+      <h2>Bem-vindo</h2>
+      <p>Faça login para acessar sua conta</p>
+      <form>
+        <label for="username">Usuário:</label>
+        <input 
+          type="text" 
+          id="username" 
+          name="username" 
+          placeholder="Digite seu usuário" 
+          [(ngModel)]="username" 
+          required>
+        <label for="password">Senha:</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          placeholder="Digite sua senha" 
+          [(ngModel)]="password" 
+          required>
+        <button type="button" id="login-button" (click)="login()">Entrar</button>
+        <div class="login-options">
+          <p>Ou faça login com:</p>
+          <div class="social-buttons">
+            <button type="button" class="social-button">
+              <img src="assets/images/google.png" alt="Google" class="social-icon">
+            </button>
+            <button type="button" class="social-button">
+              <img src="assets/images/facebook.png" alt="Facebook" class="social-icon">
+            </button>
+            <button type="button" class="social-button">
+              <img src="assets/images/apple.png" alt="Apple" class="social-icon">
+            </button>
+            <button type="button" class="social-button">
+              <img src="assets/images/microsoft.png" alt="Microsoft" class="social-icon">
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div class="loading-overlay" *ngIf="isLoading">
+    <div class="loading-spinner"></div>
+    <p>Carregando...</p>
+  </div>
+</div>

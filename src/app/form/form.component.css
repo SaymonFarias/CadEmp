@@ -1,0 +1,120 @@
+form {
+    max-width: 500px;
+    margin: 0 auto; /* Centraliza o card horizontalmente */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+    margin-top: 15px; /* Reduz o espaçamento entre o botão e o início do formulário */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+}
+
+button {
+    margin-top: 20px; /* Aumenta o espaçamento acima do botão */
+    padding: 10px 15px;
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+}
+
+button + button {
+    margin-left: 20px; /* Adiciona espaçamento de 20px entre os botões */
+    margin-top: 10px; /* Adiciona espaçamento de 10px acima do segundo botão */
+}
+
+h2 {
+    margin-top: 15px;
+    padding: 10px 15px;
+    text-align: center; /* Centraliza o texto */
+    font-family: Arial, sans-serif; /* Define a mesma fonte do login */
+}
+
+/* Estilo para campos com erro */
+input.ng-invalid.ng-dirty {
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+/* Estilo para mensagens de erro */
+span.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.logo {
+    height: 60px; /* Aumenta a altura da logo em 50% (de 40px para 60px) */
+    width: auto; /* Mantém a proporção da largura */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens no cabeçalho */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Aumenta o espaçamento entre os links de 20px para 30px */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #333; /* Cor do texto */
+    font-weight: bold; /* Destaca os links */
+    transition: color 0.3s; /* Transição suave para hover */
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+.import-button {
+    display: inline-block; /* Garante que o botão se ajuste ao conteúdo */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-align: center; /* Centraliza o texto no botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    background-color: #007bff; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para hover */
+    margin-bottom: 2px; /* Reduz o espaçamento abaixo do botão */
+    margin-left: 30px; /* Alinha o botão à direita */
+}
+
+.import-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .import-cnpj-button {
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    padding: 8px 10px; /* Reduz o espaçamento interno */
+    white-space: nowrap; /* Garante que o texto fique em uma única linha */
+    width: auto; /* Ajusta a largura automaticamente */
+    
+  }
+}

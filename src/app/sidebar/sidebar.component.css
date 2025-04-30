@@ -1,0 +1,332 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 60px; /* Largura padrão do sidebar */
+  background-color: #333;
+  color: #fff;
+  transition: width 0.3s ease; /* Transição suave para expansão */
+  overflow: hidden;
+  position: fixed; /* Sidebar fixo sobreposto */
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000; /* Garante que o sidebar fique acima do conteúdo */
+  display: flex;
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: flex-start; /* Alinha os itens na parte superior */
+  pointer-events: auto; /* Permite interação com o sidebar */
+}
+
+.sidebar.expanded {
+  width: 200px; /* Largura expandida do sidebar */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Organiza os itens em coluna */
+  gap: 2px; /* Reduz o espaçamento entre os botões para quase zero */
+  justify-content: flex-start; /* Remove o espaçamento uniforme e alinha os itens no topo */
+  height: auto; /* Ajusta a altura para os itens ocuparem apenas o espaço necessário */
+}
+
+.sidebar ul li {
+  width: 100%; /* Faz os botões ocuparem toda a largura */
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+  padding: 15px; /* Adiciona espaçamento interno */
+  color: #fff;
+  text-decoration: none;
+  background-color: #333; /* Fundo padrão dos botões */
+  transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
+  border-radius: 0; /* Remove os cantos arredondados */
+  white-space: nowrap; /* Impede que o texto seja cortado */
+  overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+  text-overflow: ellipsis; /* Adiciona reticências ao texto cortado */
+}
+
+.sidebar.expanded ul li a {
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+  white-space: normal; /* Permite que o texto quebre em várias linhas no estado expandido */
+}
+
+.sidebar ul li a:hover {
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda ao passar o mouse */
+  background-color: #444; /* Fundo mais escuro ao passar o mouse */
+}
+
+.sidebar ul li a.active {
+  background-color: #007bff; /* Fundo azul para a página ativa */
+  color: #fff; /* Garante que o texto permaneça branco */
+}
+
+.sidebar ul li a i {
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #444; /* Fundo para destacar a logo */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o traço no estado recolhido */
+  height: 40px; /* Altura igual à de um botão */
+  color: transparent; /* Esconde o texto no estado recolhido */
+  font-size: 14%;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #555; /* Traço superior */
+  border-bottom: 1px solid #555; /* Traço inferior */
+  transition: color 0.3s ease, justify-content 0.3s ease; /* Transição suave para alinhamento e cor */
+}
+
+.separator::before {
+  content: ''; /* Exibe o traço no estado recolhido */
+  width: 30px; /* Largura do traço */
+  height: 1px;
+  background-color: #555; /* Cor do traço */
+}
+
+.sidebar.expanded .separator {
+  justify-content: flex-start; /* Alinha o texto à esquerda no estado expandido */
+  color: #666; /* Exibe o texto "Módulos" no estado expandido */
+}
+
+.sidebar.expanded .separator::before {
+  content: 'Módulos'; /* Substitui o traço pelo texto "Módulos" */
+  background-color: transparent; /* Remove o fundo do traço */
+  font-size: 10px;
+  padding-left: 15px;
+}
+
+.logo {
+  width: 60px; /* Reduz o tamanho da logo */
+  height: auto;
+  transition: width 0.3s;
+}
+
+.sidebar.expanded .logo {
+  width: 60px; /* Ajusta o tamanho da logo quando expandida */
+}
+
+.logout-container {
+  position: absolute; /* Posiciona o botão de forma absoluta */
+  bottom: 60px; /* Mantém o botão acima do identificador de versão */
+  width: 100%; /* Garante que ocupe toda a largura */
+}
+
+.logout-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o ícone no estado recolhido */
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+  padding: 15px; /* Adiciona espaçamento interno */
+  color: #fff;
+  text-decoration: none;
+  background-color: #333; /* Fundo padrão */
+  transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
+  border-radius: 0; /* Remove os cantos arredondados */
+}
+
+.sidebar:not(.expanded) .logout-container a {
+  justify-content: center; /* Centraliza o ícone no estado recolhido */
+}
+
+.sidebar.expanded .logout-container a {
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+}
+
+.logout-container a i {
+  font-size: 20px; /* Tamanho do ícone */
+}
+
+.sidebar:not(.expanded) .logout-container a span {
+  display: none; /* Esconde o texto no estado recolhido */
+}
+
+.sidebar.expanded .logout-container a span {
+  display: inline; /* Exibe o texto no estado expandido */
+}
+
+.logout-container a:hover {
+  background-color: #444; /* Fundo mais escuro ao passar o mouse */
+}
+
+.logout-container a.active {
+  background-color: #007bff; /* Fundo azul para o botão ativo */
+  color: #fff; /* Garante que o texto permaneça branco */
+}
+
+.version {
+  position: absolute; /* Posiciona o identificador de forma absoluta */
+  bottom: 20px; /* Fixa o identificador no canto inferior do sidebar */
+  width: 100%; /* Garante que ocupe toda a largura */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o texto no estado recolhido */
+  height: 40px; /* Altura do identificador */
+  color: #666; /* Cor acinzentada */
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 1px solid #555; /* Traço superior */
+}
+
+.sidebar.expanded .version {
+  justify-content: flex-start; /* Alinha o texto à esquerda no estado expandido */
+  padding-left: 15px; /* Adiciona espaçamento à esquerda no estado expandido */
+}
+
+.content {
+  position: absolute; /* Conteúdo fixo */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  padding: 20px;
+  background: linear-gradient(135deg, #c9e265 0%, #09205f 100%); /* Gradiente de fundo */
+  overflow-y: auto;
+  z-index: 1; /* Garante que o conteúdo fique abaixo do sidebar */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed; /* Sidebar fixo sobreposto */
+    top: 0;
+    left: 0;
+    width: 60px; /* Largura padrão do sidebar */
+    height: 100%; /* Ocupa toda a altura da tela */
+    z-index: 1000; /* Garante que o sidebar fique acima do conteúdo */
+    background-color: #333; /* Fundo escuro */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa a largura */
+    transition: width 0.3s ease; /* Transição suave para expansão */
+  }
+
+  .sidebar.expanded {
+    width: 200px; /* Largura expandida do sidebar */
+  }
+
+  .content {
+    position: absolute; /* Conteúdo fixo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+    height: 100%; /* Ocupa toda a altura */
+    padding: 20px;
+    background: linear-gradient(135deg, #c9e265 0%, #09205f 100%); /* Gradiente de fundo */
+    overflow-y: auto;
+    z-index: 1; /* Garante que o conteúdo fique abaixo do sidebar */
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    gap: 2px; /* Reduz o espaçamento entre os botões */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os ícones no estado recolhido */
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    padding: 15px; /* Adiciona espaçamento interno */
+    color: #fff;
+    text-decoration: none;
+    background-color: #333; /* Fundo padrão */
+    transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
+    border-radius: 0; /* Remove os cantos arredondados */
+    white-space: nowrap; /* Impede que o texto seja cortado */
+    overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+    text-overflow: ellipsis; /* Adiciona reticências ao texto cortado */
+  }
+
+  .sidebar.expanded ul li a {
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+    white-space: normal; /* Permite que o texto quebre em várias linhas no estado expandido */
+  }
+
+  .sidebar ul li a:hover {
+    background-color: #444; /* Fundo mais escuro ao passar o mouse */
+  }
+
+  .sidebar ul li a.active {
+    background-color: #007bff; /* Fundo azul para a página ativa */
+    color: #fff; /* Garante que o texto permaneça branco */
+  }
+
+  .logout-container {
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    bottom: 60px; /* Mantém o botão acima do identificador de versão */
+    width: 100%; /* Garante que ocupe toda a largura */
+  }
+
+  .logout-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o ícone no estado recolhido */
+    gap: 10px; /* Espaçamento entre o ícone e o texto */
+    padding: 15px; /* Adiciona espaçamento interno */
+    color: #fff;
+    text-decoration: none;
+    background-color: #333; /* Fundo padrão */
+    transition: background-color 0.3s ease, justify-content 0.3s ease; /* Transição suave para hover e alinhamento */
+    border-radius: 0; /* Remove os cantos arredondados */
+  }
+
+  .sidebar:not(.expanded) .logout-container a {
+    justify-content: center; /* Centraliza o ícone no estado recolhido */
+  }
+
+  .sidebar.expanded .logout-container a {
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda quando o sidebar está expandido */
+  }
+
+  .sidebar:not(.expanded) .logout-container a span {
+    display: none; /* Esconde o texto no estado recolhido */
+  }
+
+  .sidebar.expanded .logout-container a span {
+    display: inline; /* Exibe o texto no estado expandido */
+  }
+
+  .version {
+    position: absolute; /* Posiciona o identificador de forma absoluta */
+    bottom: 20px; /* Fixa o identificador no canto inferior do sidebar */
+    width: 100%; /* Garante que ocupe toda a largura */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o texto no estado recolhido */
+    height: 40px; /* Altura do identificador */
+    color: #666; /* Cor acinzentada */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 1px solid #555; /* Traço superior */
+  }
+
+  .sidebar.expanded .version {
+    justify-content: flex-start; /* Alinha o texto à esquerda no estado expandido */
+    padding-left: 15px; /* Adiciona espaçamento à esquerda no estado expandido */
+  }
+}

@@ -1,14 +1,16 @@
 /* Importar a fonte Libre Franklin do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
 body {
-  font-family: 'Libre Franklin', Arial, sans-serif; /* Define a fonte padrão da página */
-  background-color: #8B0000; /* Define o fundo da página */
+  font-family: Arial, sans-serif; /* Define a fonte Arial como padrão para todo o projeto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #c9e265 0%, #09205f 100%); /* Gradiente de fundo com ângulo de 43° */
   color: #fff; /* Define a cor do texto padrão */
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove espaçamentos padrão */
 }
 
 label + select {
@@ -158,4 +160,22 @@ form span.error-message {
   color: #555; /* Mesma cor dos rótulos */
   font-size: 24px; /* Tamanho maior */
   margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  h1, h2, h3 {
+    font-size: 90%; /* Reduz o tamanho dos títulos */
+  }
+
+  button {
+    padding: 8px 12px; /* Reduz o espaçamento interno dos botões */
+  }
+
+  input, select {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos campos */
+  }
 }
