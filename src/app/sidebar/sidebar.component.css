@@ -15,7 +15,7 @@
 }
 
 .sidebar.expanded {
-  width: 200px;
+  width: 180px;
 }
 
 .sidebar ul {
@@ -70,7 +70,7 @@
 }
 
 .sidebar.expanded .logo {
-  width: 120px; /* Tamanho maior da logo quando expandida */
+  width: 80px; /* Tamanho maior da logo quando expandida */
 }
 
 .logout-container {
@@ -97,4 +97,9 @@
 
 .sidebar.expanded .logout-container a {
   padding-left: 0px; /* Mantém o alinhamento no estado expandido */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }

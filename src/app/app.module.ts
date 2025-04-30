@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent }, // Login sem a barra lateral
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
   {
     path: '',
-    component: SidebarComponent, // Barra lateral encapsula as demais rotas
+    component: SidebarComponent,
     children: [
-      { path: 'form', component: FormComponent } // Página de formulário
+      { path: 'inicio', component: WelcomeComponent },
+      { path: 'form', component: FormComponent }
     ]
   },
-  { path: '**', redirectTo: '/login' } // Redireciona para login se a rota não for encontrada
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
@@ -24,7 +27,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     FormComponent,
-    SidebarComponent
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

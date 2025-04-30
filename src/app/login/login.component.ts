@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  standalone: false, // Definido como false
+  standalone: false,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -19,18 +19,15 @@ export class LoginComponent {
     console.log('Usuário:', this.username);
     console.log('Senha:', this.password);
 
-    // Exibe o loading
     this.isLoading = true;
 
-    // Simula o carregamento por 3 segundos
     setTimeout(() => {
       this.isLoading = false;
-      this.isTransitioning = true; // Inicia a transição
+      this.isTransitioning = true;
 
-      // Aguarda a animação de transição antes de redirecionar
       setTimeout(() => {
-        this.router.navigate(['/form']); // Redireciona para a página de formulário
-      }, 500); // Tempo da animação (0.5s)
+        this.router.navigate(['/inicio']); // Redireciona para a página de boas-vindas
+      }, 500);
     }, 3000);
   }
 }

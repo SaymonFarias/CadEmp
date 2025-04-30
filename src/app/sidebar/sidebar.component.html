@@ -6,6 +6,12 @@
     </div>
     <ul>
       <li>
+        <a routerLink="/inicio">
+          <i class="fi fi-rr-home"></i> <!-- Ícone atualizado para a página de boas-vindas -->
+          <span *ngIf="expanded">Início</span>
+        </a>
+      </li>
+      <li>
         <a routerLink="/form">
           <i class="fi fi-rr-document"></i> <!-- Ícone para o formulário -->
           <span *ngIf="expanded">Formulário</span> <!-- Nome da página exibido apenas quando expandido -->

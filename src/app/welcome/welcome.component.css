@@ -1,0 +1,21 @@
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.welcome-card {
+  max-width: 900px; /* Mesmo tamanho do card de login */
+  width: 100%;
+  height: 750px; /* Altura ajustada para 750px */
+  padding: 40px; /* Espaçamento interno maior */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 40px auto; /* Centraliza o card horizontal e verticalmente */
+}
